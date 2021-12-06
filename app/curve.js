@@ -24,7 +24,7 @@ class EC {
     }
 
     add(P, Q = null) {
-        console.log(`Adding: (${P?.x}, ${P?.y}) + (${Q?.x}, ${Q?.y})`)
+        // console.log(`Adding: (${P?.x}, ${P?.y}) + (${Q?.x}, ${Q?.y})`)
         if (P === null) {
             return Q;
         }
@@ -71,9 +71,9 @@ class EC {
     doubleAndAdd(k, P) {
         const bin = decimal2binary(k).split("").reverse().join("");
         // console.log(bin);
-        console.log('--- Running double-and-add ---')
-        console.log('Params:');
-        console.log(bin, `${k} * (${P.x}, ${P.y})`);
+        // console.log('--- Running double-and-add ---')
+        // console.log('Params:');
+        // console.log(bin, `${k} * (${P.x}, ${P.y})`);
 
         let result = null;
         let Q = P;
@@ -82,9 +82,9 @@ class EC {
             if (bin[i] == 1) {
                 result = this.add(result, Q);
             }
-            console.log('R:', result, result ? this.isOnCurve(result) : '');
+            // console.log('R:', result, result ? this.isOnCurve(result) : '');
             Q = this.add(Q);
-            console.log('Q:', Q, this.isOnCurve(Q));
+            // console.log('Q:', Q, this.isOnCurve(Q));
         }
 
         return result;
