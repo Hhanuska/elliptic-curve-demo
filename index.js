@@ -15,9 +15,9 @@ const Alice = {
 
 console.log('Alice pk:', Alice.public);
 
-// const msg = 'hello'
-const z = 10; // msg hash digest
-// const z = parseInt(sha256(msg).toString())
+const msg = 'hello'
+// const z = 10; // msg hash digest
+const z = parseInt(sha256(msg).toString())
 
 // Sign
 const k = ec.randK();
