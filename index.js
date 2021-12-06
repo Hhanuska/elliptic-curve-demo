@@ -41,7 +41,7 @@ temp1 = ec.doubleAndAdd(u1, ec.generator);  // 17, 8
 temp2 = ec.doubleAndAdd(u2, Alice.public);  // 10, 12
 console.log(++p + '.', 'temps:', temp1, temp2);
 
-const P = ec.add(temp2, temp1);             // 9, 17
+const P = ec.add(temp1, temp2);             // 9, 17
 
 console.log(++p + '.', P);
 

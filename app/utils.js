@@ -10,7 +10,7 @@ exports.mod = (n, m) => {
 
 exports.mulInverse = (num, order) => {
     for (let i = 1; i < order; i++) {
-        if ((num * i) % order === 1) {
+        if (exports.mod((num * i),  order) === 1) {
             return i;
         }
     }
